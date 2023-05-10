@@ -26,7 +26,7 @@ const BlogHeader: React.FC<headerProps> = (props) => {
         alt="author pfp"
       />
       <div className="flex flex-col">
-        <p className="font-semibold text-[1rem]"> {author.name} </p>
+        <p className="font-semibold text-[1rem]"> {author.name + "r"} </p>
         <div className="flex flex-wrap">
           <li className="list-none font-normal text-[0.85rem] md:mr-4 sm:mr-0">
             {author.url}

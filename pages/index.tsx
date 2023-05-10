@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import {GetServerSideProps, InferGetServerSidePropsType, NextPage} from 'next'
-import {useMemo, useState} from 'react'
+import {useEffect, useMemo, useState} from 'react'
 import BlogPreview from '../components/BlogPreview'
 import {getBlogs} from '../server/blogs'
 import {BlogPost} from '../types/blog'
@@ -61,11 +61,11 @@ const Home: NextPage = ({
           return (
             <div
               key={blog.id}
-              className="max-w-[28em] max-h-[20em] overflow-hidden mx-6 mb-6 bg-neutral-300 text-zinc-800 rounded-lg p-4 hover:bg-neutral-500 hover:text-neutral-300 transition-all duration-300"
+              className="max-w-[38em] max-h-[20em] overflow-hidden mx-6 mb-6 bg-neutral-300 text-zinc-800 rounded-lg p-4 hover:bg-neutral-500 hover:text-neutral-300 transition-all duration-300"
             >
               <a href={blog.url} target="_blank" rel="noreferrer">
                 <BlogPreview
-                  title={blog.title}
+                  title={blog.title} 
                   bodyText={blog.bodyText}
                   createdAt={blog.createdAt}
                   author={blog.author}
